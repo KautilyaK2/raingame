@@ -33,9 +33,9 @@ while not done:
              done=1
     win.fill((0,0,0))
     text_surface = font.render(str(int(health)), False, (0, 0, 0))
-    print(cells[px//cell_size][py//cell_size])
     if cells[py//cell_size][px//cell_size]==0:
         health-=0.01
+        maxhealth-=0.005
         f=0
     else:
         if not f:
