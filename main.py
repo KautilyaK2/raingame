@@ -15,7 +15,6 @@ maxhealth=10
 f=0
 font = pygame.font.SysFont('Comic Sans MS', 30)
 def nextlevel(p):
-    p=p-0.05
     cells=[[int(random.random()<p) for i in range(20)] for j in range(20)]
     return cells
 while not done:
@@ -47,6 +46,7 @@ while not done:
         f=1
     if px==py==800-cell_size:
         maxhealth=health
+        p=p-0.1
         cells=nextlevel(p)
         px,py=0,0
     for y in range(len(cells)): 
