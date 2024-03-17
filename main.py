@@ -46,7 +46,7 @@ while not done:
         f=1
     if px==py==800-cell_size:
         maxhealth=health
-        p=p-0.1
+        p=p-0.05
         cells=nextlevel(p)
         px,py=0,0
     for y in range(len(cells)): 
